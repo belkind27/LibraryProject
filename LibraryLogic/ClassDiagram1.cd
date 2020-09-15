@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LibraryLogic.Book" Collapsed="true">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>library item classes\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.LibraryItem" Collapsed="true">
+    <Position X="3.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAGIAAAAQAAAAAECAJAABSAAAQAEAAAAABAAAAAAAA=</HashCode>
+      <FileName>library item classes\LibraryItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.Magazine" Collapsed="true">
+    <Position X="4.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>library item classes\Magazine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.Client" Collapsed="true">
+    <Position X="6.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAKAAAAAAQAAAAEAAhAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>person classes\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.Librarian" Collapsed="true">
+    <Position X="8.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>person classes\Librarian.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.Person" Collapsed="true">
+    <Position X="7.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAAAAAEAAAAAAQACAAAAAACAAAAAAAABAA=</HashCode>
+      <FileName>person classes\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.GenreSale" Collapsed="true">
+    <Position X="10" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAABAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Sale classes\GenreSale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.Borrow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAQAAAAAQAEIBAEEABAAAQEABAKEAAAAAIAAAAAACA=</HashCode>
+      <FileName>Sale classes\Other.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LibraryLogic.LibrarySystemException" Collapsed="true">
+    <Position X="13.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sale classes\Other.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.Sale" Collapsed="true">
+    <Position X="10.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAIAEAAAAAQoAAAAAAAAgAAAAAAgABA=</HashCode>
+      <FileName>Sale classes\Sale.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryLogic.StringSale" Collapsed="true">
+    <Position X="11.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAEAAAAAAAAABAAAIAAAABAAAAgAAA=</HashCode>
+      <FileName>Sale classes\StringSale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.LibraryItemCollection" Collapsed="true">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAwIAAAgAAAACACAAABAAAABQAAAAAAABAAQAAAAA=</HashCode>
+      <FileName>library classes\LibraryItemCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.LibraryPersonCollections" Collapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEBgIAAAgAgQAAAAAAAAAAAAAQAAAAgAAAAAQAAAAA=</HashCode>
+      <FileName>library classes\LibraryPersonCollections.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.LibrarySystem" Collapsed="true">
+    <Position X="7.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEEAEAIQAhAUQACBgAAGoAAAoACAAAAkCAQAkCAQQAg=</HashCode>
+      <FileName>library classes\LibrarySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLogic.SaleCollection" Collapsed="true">
+    <Position X="10.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAgIAAAgAAAgAAAAAABAAAAAAAAAAAAAwAAAAAAAA=</HashCode>
+      <FileName>library classes\SaleCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="LibraryLogic.IknowDateDeadLine" Collapsed="true">
+    <Position X="13.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sale classes\Other.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="LibraryLogic.Genres" Collapsed="true">
+    <Position X="13.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAAACiAplAQAABIYABCEDIYBAAAgBACAgNiSVAQAgEg=</HashCode>
+      <FileName>Sale classes\Other.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,9 @@
+C:\Users\belki\source\repos\LibraryLogic\bin\Debug\netstandard2.0\LibraryLogic.deps.json
+C:\Users\belki\source\repos\LibraryLogic\bin\Debug\netstandard2.0\LibraryLogic.dll
+C:\Users\belki\source\repos\LibraryLogic\bin\Debug\netstandard2.0\LibraryLogic.pdb
+C:\Users\belki\source\repos\LibraryLogic\obj\Debug\netstandard2.0\LibraryLogic.AssemblyInfoInputs.cache
+C:\Users\belki\source\repos\LibraryLogic\obj\Debug\netstandard2.0\LibraryLogic.AssemblyInfo.cs
+C:\Users\belki\source\repos\LibraryLogic\obj\Debug\netstandard2.0\LibraryLogic.csproj.CoreCompileInputs.cache
+C:\Users\belki\source\repos\LibraryLogic\obj\Debug\netstandard2.0\LibraryLogic.dll
+C:\Users\belki\source\repos\LibraryLogic\obj\Debug\netstandard2.0\LibraryLogic.pdb
+C:\Users\belki\source\repos\LibraryLogic\obj\Debug\netstandard2.0\LibraryLogic.csprojAssemblyReference.cache

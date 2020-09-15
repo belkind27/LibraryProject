@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "QW/9oNawAkr/70WWb8O/hBepwz5n4EYhn1FzXX/qaWoi3g9cAtUhZ7Bb/8HzlgJajbQkDpaWITpSmatwXJCwMA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\belki\\source\\repos\\LibraryLogic\\LibraryLogic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\belki\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\belki\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

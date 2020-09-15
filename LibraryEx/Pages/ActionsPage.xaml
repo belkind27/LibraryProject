@@ -1,0 +1,143 @@
+﻿<Page
+    x:Class="LibraryEx.ActionsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LibraryEx"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Canvas x:Name="pageBackground" >
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Assets/backGround.jpg"/>
+        </Canvas.Background>
+        <Canvas x:Name="client_canvas" Visibility="Collapsed" Canvas.Left="80" Canvas.Top="350" Width="1110" Height="250">
+            <Button x:Name="return_btn" Visibility="Visible" Content="Return Book" Height="226" Canvas.Left="841" Canvas.Top="14" Width="259" FontSize="35" FontWeight="Bold" Foreground="White" Click="return_btn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/bookshelf.png"/>
+                </Button.Background>
+                <Button.FocusVisualPrimaryBrush>
+                    <ImageBrush ImageSource="/Assets/bookshelf.png" Stretch="UniformToFill"/>
+                </Button.FocusVisualPrimaryBrush>
+            </Button>
+            <Button x:Name="borrow_btn" Visibility="Visible" Content="My Borrows" Height="226" Canvas.Left="35" Canvas.Top="10" Width="259" FontSize="35" FontWeight="Bold" Foreground="White" Click="borrow_btn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/education.png"/>
+                </Button.Background>
+                <Button.FocusVisualPrimaryBrush>
+                    <ImageBrush ImageSource="04682cea-bb56-4a26-bc02-a0d31be82ac0" Stretch="UniformToFill"/>
+                </Button.FocusVisualPrimaryBrush>
+            </Button>
+            <Button x:Name="addBalance_btn" Visibility="Visible" Content="Add Balance" Height="226" Canvas.Left="442" Canvas.Top="14" Width="259" FontSize="32" FontWeight="Bold" Foreground="White" Click="addBalance_btn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/wallet.png"/>
+                </Button.Background>
+                <Button.FocusVisualPrimaryBrush>
+                    <ImageBrush ImageSource="04682cea-bb56-4a26-bc02-a0d31be82ac0" Stretch="UniformToFill"/>
+                </Button.FocusVisualPrimaryBrush>
+            </Button>
+        </Canvas>
+        <Canvas x:Name="search_canvas" Visibility="Collapsed" Height="105" Width="1130" Canvas.Left="126" Canvas.Top="255">
+            <ListView x:Name="guessSearch_listView"  Width="730" MaxHeight="200" Canvas.Left="10" Canvas.Top="52" Background="#FFFDFDFD"></ListView>
+            <ComboBox x:Name="genreCombox" Height="51" Canvas.Left="938" Visibility="Collapsed" Canvas.Top="2" Width="138" PlaceholderText="Genres" Background="#66FFFFFF" ></ComboBox>
+            <Rectangle x:Name="search_rec" Visibility="Visible" Height="51" Canvas.Left="739" Stroke="Black" Canvas.Top="2" Width="61" Fill="#FF0F83AE"/>
+            <Button x:Name="search_btn" Content="" Height="51" Canvas.Left="745" Canvas.Top="2" Width="61" FocusVisualPrimaryBrush="{x:Null}" Click="search_btn_Click" Visibility="Visible">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/magnifying-glass.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <TextBox x:Name="search_txtbox" BeforeTextChanging="txtBox_BeforeTextChanging" Height="51" Visibility="Visible" Canvas.Left="10" Canvas.Top="2" Text="" TextWrapping="Wrap" Width="730" PlaceholderText="Search for an item to borrow!" FontWeight="Bold" FontSize="30"/>
+            <ComboBox x:Name="search_combox" Height="51" Canvas.Left="800" Visibility="Visible" Canvas.Top="2" Width="138" Background="White" FontWeight="Bold" FontSize="17" SelectionChanged="search_combox_SelectionChanged" PlaceholderText="" SelectedIndex="0">
+                <ComboBoxItem Background="White" BorderBrush="Black" Content="Name"/>
+                <ComboBoxItem BorderBrush="White" Content="Auther"/>
+                <ComboBoxItem Content="Publishar"/>
+                <ComboBoxItem Content="Id"/>
+                <ComboBoxItem Content="Genre"/>
+            </ComboBox>
+        </Canvas>
+        <Image x:Name="logo_img"  Height="200" Width="200" Source="/Assets/logo.png" Stretch="Fill" Canvas.Left="540"/>
+        <TextBlock Height="35"  Canvas.Left="464" Canvas.Top="655" Text="Software craeted by roy belkind" TextWrapping="Wrap" Width="322" FontWeight="Bold" FontSize="20"/>
+        <Image x:Name="balance_img" Visibility="Visible" Height="66" Canvas.Left="30" Width="78" Source="/Assets/money-bag.png" Stretch="Fill" Canvas.Top="152"/>
+        <Image x:Name="banner_img" Height="93" Canvas.Top="54" Width="420" Source="/Assets/banner.png" Stretch="UniformToFill"/>
+        <TextBlock x:Name="bannar_txtblok" Height="56" Canvas.Left="126" Canvas.Top="70" Text="" TextWrapping="Wrap" Width="256" FontWeight="Bold" FontSize="28"/>
+
+        <TextBlock x:Name="balance_txtblock" Height="33" Canvas.Left="126" Canvas.Top="166" Text="" TextWrapping="Wrap" Width="236" FontWeight="Bold" FontSize="22"/>
+        <Canvas x:Name="addBalance_canvas"  Height="427"  Width="1144" Canvas.Left="68" Canvas.Top="175"  Visibility="Collapsed" Background="#FF2891D3">
+            <TextBlock x:Name="addBalance_txtblock" Height="241" Canvas.Left="0100" Canvas.Top="0" Text="Dear user,this app isnt real and therfore its currency doesnt have any value,please enter any amount you like but note yourself that as a small business we dont allow our clinet to enter a balance greater then 999." TextWrapping="Wrap" Width="1024" FontSize="36" FontWeight="Bold" Visibility="Visible"/>
+            <TextBox x:Name="addBalance_txtbox" BeforeTextChanging="txtBoxBalance_BeforeTextChanging" Height="60" Canvas.Left="370" Canvas.Top="300" Text="" TextWrapping="Wrap" Width="412" Background="#66FBFBFB" InputScope="Number" PlaceholderText="Enter balance" FontSize="24" Visibility="Visible"/>
+            <Button x:Name="enterBalance_btn" Content="enter" Height="60" Canvas.Left="787" Canvas.Top="300" Width="93" Background="#3327EA14" BorderBrush="#FF0F0202" Foreground="Black" FontSize="20" RequestedTheme="Default" CornerRadius="10,10,10,10"  Visibility="Visible" Click="enterBalance_btn_Click"/>
+            <Button x:Name="exitBalancePop" Content="" Height="40" Canvas.Left="1100" Canvas.Top="0" Width="40"  Visibility="Visible" RenderTransformOrigin="-1.9,-3.15" Click="exitBalancePop_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/Square44x44Logo.scale-200.png"/>
+                </Button.Background>
+            </Button>
+        </Canvas>
+        <Canvas x:Name="librarian_canvas" Canvas.Left="180" Canvas.Top="190" Width="900" Height="450" Visibility="Collapsed">
+            <Button x:Name="addBook_btn" Content="Add Book" Height="160" Canvas.Left="699" Canvas.Top="29" Width="201" Foreground="White" FontWeight="Bold" FontSize="24" Click="addBook_btn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/add.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="report_btn" Content="Create Report" Height="160" Canvas.Left="10" Canvas.Top="259" Width="201" FontSize="24" FontWeight="Bold" Foreground="#FFF7F5F5" Click="report_btn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/business-report.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="removebook_btn" Content="Remove Book" Height="160" Canvas.Left="689" Canvas.Top="259" Width="201" FontSize="24" FontWeight="Bold" Foreground="White" Click="removebook_btn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/delete.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="editSale_btn" Content="Edit Sale" Height="160" Canvas.Left="33" Canvas.Top="29" Width="201" FontSize="24" Foreground="#FFF7F5F5" FontWeight="Bold" Click="editSale_btn_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/Assets/price-label.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="editBook_btn" Content="Edit book" Height="160" Canvas.Left="328" Canvas.Top="29" Width="201" FontSize="24" Foreground="#FFF7F5F5" FontWeight="Bold" Click="editBook_btn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/settings.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="addSale_btn" Content="Add Sale" Height="160" Canvas.Left="328" Canvas.Top="259" Width="201" Foreground="#FFF7F5F5" FontSize="24" FontWeight="Bold" Click="addSale_btn_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/sale-label.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+        </Canvas>
+
+        <Canvas x:Name="confermtion_canvas" Visibility="Collapsed" Height="220" Canvas.Left="225" Canvas.Top="250" Width="830" Background="#FF096397">
+            <TextBlock x:Name="confermtion_txtblock" Canvas.Left="100" Canvas.Top="50" Text="" FontSize="30" FontWeight="Bold"></TextBlock>
+            <Button x:Name="confermtionNo_btn" Content="no" Height="60" Canvas.Left="80" Canvas.Top="150" Width="150" Background="#3327EA14" BorderBrush="#FF0F0202" Foreground="Black" FontSize="35" RequestedTheme="Default" CornerRadius="10,10,10,10" FontWeight="Bold" Visibility="Visible" Click="confermtionNo_btn_Click"/>
+            <Button x:Name="confermtionYes_btn" Canvas.Left="600" Canvas.Top="150" Content="yes" Height="60" Width="150" Background="#3327EA14" BorderBrush="#FF0F0202" Foreground="Black" FontSize="35" RequestedTheme="Default" CornerRadius="10,10,10,10" FontWeight="Bold" Visibility="Visible" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="confermtionYes_btn_Click"/>
+        </Canvas>
+        <Button x:Name="back_btn"  Width="100" Height="100" Canvas.Top="0" Canvas.Left="0" Click="back_btn_Click" RenderTransformOrigin="1.606,0.557">
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/reply.png"/>
+            </Button.Background>
+        </Button>
+        <Canvas  x:Name="salePopUp_canvas" Height="474" Canvas.Left="210" Canvas.Top="152" Width="869" Background="#FF2891D3" Visibility="Collapsed">
+            <Button x:Name="exitSaleePop" Content="" Height="40" Canvas.Left="829" Width="40"  Visibility="Visible" RenderTransformOrigin="-1.9,-3.15" Click="exitSaleePop_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/StoreLogo.png"/>
+                </Button.Background>
+            </Button>
+            <TextBlock x:Name="salePopUp_txtblock" Text="SALE!" Canvas.Left="342" Height="98" Width="209" FontSize="70" FontWeight="Bold"/>
+            <ListView x:Name="salePopUp_listview" Width="454" Height="316" Canvas.Left="214" Canvas.Top="98"></ListView>
+        </Canvas>
+        <ComboBox x:Name="report_combox" Height="97"  Canvas.Left="222" Visibility="Collapsed" Canvas.Top="287" Width="198" Background="White" FontWeight="Bold" FontSize="20" SelectionChanged="report_combox_SelectionChanged" PlaceholderText="" SelectedIndex="0">
+            <ComboBoxItem Background="White" BorderBrush="Black" Content="delay borrows"/>
+            <ComboBoxItem BorderBrush="White" Content="inventory"/>
+            <ComboBoxItem Content="users"/>
+            <ComboBoxItem Content="sales"/>
+            <ComboBoxItem Content="borrows"/>
+        </ComboBox>
+        <CalendarView x:Name="report_calender" Visibility="Collapsed" Height="238" Canvas.Left="679" Canvas.Top="287" Width="324"  FontWeight="Bold" FontSize="48" Background="#FF2891D3" BorderBrush="#FFE6E6E6" />
+        <Button x:Name="createReport_btn" Content="new report" Height="100" Visibility="Collapsed" Canvas.Left="442" Canvas.Top="282" Width="150" Background="#3327EA14" BorderBrush="#FF0F0202" Foreground="Black" FontSize="25" RequestedTheme="Default" CornerRadius="10,10,10,10" Click="report_btn1_Click" FontWeight="Bold" />
+        <ComboBox x:Name="reportOption_combox" Height="97"  Canvas.Left="442" Visibility="Collapsed" Canvas.Top="287" Width="198" Background="White" FontWeight="Bold" FontSize="20" PlaceholderText="" SelectedIndex="0" SelectionChanged="reportOption_combox_SelectionChanged">
+            <ComboBoxItem Background="White" BorderBrush="Black" Content="All"/>
+            <ComboBoxItem BorderBrush="White" Content="By date"/>
+            <ComboBoxItem BorderBrush="White" Content="currently active"/>
+        </ComboBox>
+    </Canvas>
+</Page>
